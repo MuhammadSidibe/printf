@@ -57,9 +57,7 @@ typedef struct specifier
 } specifier_t;
 
 int _printf(const char *format, ...);
-<<<<<<< HEAD
-void my_printf(const char *format, ...);
-=======
+
 /* puts function */
 int _puts(char *str);
 int _putchar(int c);
@@ -84,6 +82,5 @@ int get_modifier(char *s, params_t *params);
 char *get_width(char *s, params_t *params, va_list ap);
 
 /* conversion */
->>>>>>> 440fe40dc27e6436e4b96f0b73c448f1f29a60b6
 
 #endif /* PRINTF_H */
