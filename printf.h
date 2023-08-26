@@ -17,5 +17,6 @@
 #define CONVERT_UNSIGNED 2
 
 int _printf(const char *format, ...);
+void my_printf(const char *format, ...);
 
 #endif /* PRINTF_H */

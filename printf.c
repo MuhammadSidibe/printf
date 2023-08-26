@@ -42,3 +42,35 @@ int main(void)
     printf("Unknown:[%r]\n");
     return (0);
 }
+
+/**
+ * my_printf - Custom printf implementation
+ * @format: The format string
+ * @...: Additional arguments
+ */
+void my_printf(const char *format, ...);
+{
+	va_list args;
+	va_start(args, format);
+
+	char *p = (char *)format;
+	while (*p != '\0')
+	{
+	if (*p == '%')
+	{
+		p++;
+		if (*p == 'd' || *p == 'i')
+		{
+			int value = va_arg(args, int);
+		printf("%d", value);
+		}
+	}
+	else
+	{
+		putchar(*p);
+	}
+	p++;
+	}
+
+	va_end(args);
+}
